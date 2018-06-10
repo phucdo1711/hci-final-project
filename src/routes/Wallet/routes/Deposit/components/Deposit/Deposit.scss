@@ -1,0 +1,29 @@
+@import 'base';
+@import 'button';
+
+.container {
+  max-width: 1200px !important;
+}
+
+.stepper {
+  box-shadow: 0 0 0 0 white !important;
+  background-color: #fafafa !important
+}
+
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btnBack {
+  border-radius: 30px !important;
+  width: 100px !important;  
+}
+
+.instructionContainer {
+  @extend .flex-column-center;
+  padding: 30px;
+}

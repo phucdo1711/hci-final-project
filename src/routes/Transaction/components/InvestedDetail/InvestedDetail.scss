@@ -1,0 +1,23 @@
+@import 'base';
+
+.container {
+  @extend .flex-column-center;
+}
+
+.packageContainer{
+  max-width: 250px;
+}
+
+.detailText {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+  height: 30px
+}
+
+.paperDetail {
+  padding: 20px;
+}

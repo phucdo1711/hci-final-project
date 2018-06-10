@@ -1,0 +1,58 @@
+.paper {
+    padding: 30px;
+}
+
+.header {
+    justify-content: space-between;
+}
+
+.marginText {
+    margin-top: 30px !important;
+}
+
+.input{
+    // font-size: 25px !important;
+    // font-weight: 600 !important;
+    &:after {
+        background-color: rgb(230, 138, 158) !important
+    }
+}
+
+.inputLabel {
+    color: rgb(230, 138, 158)  !important;
+}
+
+
+.divider {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important
+}
+
+.detailPayment {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    height: 30px
+  }
+
+.divInputCode {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: center
+}
+
+.inputCode {
+    width: 70%;
+    &:after {
+        background-color: #FE6B8B !important
+    }
+}
+
+.errorMess {
+    color: red !important;
+    cursor: pointer;
+}

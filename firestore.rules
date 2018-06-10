@@ -1,0 +1,101 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+        return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'Admin' &&
+        get(/databases/$(database)/documents/Account/$(request.auth.uid)).data.role == 'Admin';
+    }
+
+    function isAccountant() {
+        return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'Accountant' &&
+        get(/databases/$(database)/documents/Account/$(request.auth.uid)).data.role == 'Accountant';
+    }
+
+    match /Banks/{bank}{
+      allow read;
+      allow update, create: if isAdmin();
+    }
+
+    match /users/{userId}{
+      allow read: if request.auth.uid != null;
+      allow update, create: if userId == request.auth.uid || isAdmin();
+    }
+
+    match /Account/{userId}{
+      allow read, update: if userId == request.auth.uid  || isAdmin();
+    }
+
+    match /Investments/{invest}{
+      allow read;
+      allow create, update, delete: if isAdmin();
+    }
+    
+    match /Transactions/{tran}{
+      allow read;
+      allow create: if request.auth.uid != null;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /Wallets/{wallet}{
+      allow read: if wallet == request.auth.uid;
+    }
+
+    // match /{document=**} {
+    //   allow read, write: if request.auth.uid != null;
+    // }
+    
+  }
+}
+
+
+// service cloud.firestore {
+//     match /databases/{database}/documents {
+//       match /resources/{resource} {
+
+//         function isAdmin() {
+//             return get(/databases/$(database)/documents/users/$(request.auth.uid)).isAdmin ||
+//             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin;
+//         }
+
+//         allow read;
+//         allow create, update, delete: if isAdmin();
+//     }
+//   }
+// }
+
+
+// match /databases/{database}/documents {
+//     match /bulletinBoard/{note} {
+//       // You can read any document that has a custom field named "visibility"
+//       // set to the string "public" or "read-only"
+//       allow read: if resource.data.visibility in ["public", "read-only"];
+//     }
+//     match /products/{productID}/reviews/{review} {
+//       allow read;
+//       // A user can update a product reviews, but they can't change
+//       // the headline.
+//       // Also, they should only be able up update their own product review,
+//       // and they still have to list themselves as an author
+//       allow update: if request.resource.data.headline == resource.data.headline
+//                     && resource.data.authorID == request.auth.userID
+//                     && request.resource.data.authorID == request.auth.userID;
+//   }
+
+
+// match /games/{game}/playerProfiles/{playerID} {
+//       // Every "game" document has the userID of a referee, who is allowed to
+//       // alter player profiles
+//       allow write: if get(/databases/$(database)/documents/games/$(game)).data.referee == request.auth.uid;
+ 
+//       // All players in a game are allowed to view the player profiles of any
+//       // other player.
+//       allow read: if exists(/databases/$(database)/documents/games/$(game)/playerProfiles/$(request.auth.uid));
+//     }
+//     match /guilds/{guildID}/bulletinBoard/{post} {
+//        // Assume our guild document includes a "users" field, which itself is
+//        // a map consisting of a player ID and their role. For example:
+//        // {"user_123": "Member", "user_456": "Probation", "user_789": "Admin"}
+//        //
+//        // A player can write to the bulletin board if they're listed in the
+//        // guild's "users" map field as a "Member" or "Admin"
+//        allow write: if get(/databases/$(database)/documents/guilds/$(guildID)).data.users[(request.auth.uid)] in ["Admin", "Member"];
+//     }

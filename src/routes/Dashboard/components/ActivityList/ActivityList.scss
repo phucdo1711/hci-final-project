@@ -1,0 +1,10 @@
+@import 'base';
+
+.container {
+  @extend .flex-column-center;
+}
+
+.root {
+  margin-top: 30px;
+  padding: 20px;
+}

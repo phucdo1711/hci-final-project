@@ -1,0 +1,38 @@
+@import 'base';
+
+.container {
+  @extend .flex-column-center;
+}
+
+// alert css
+.alertPaper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  padding: 20px;
+  justify-content: space-between;
+  align-content: center;
+  cursor: pointer;
+}
+
+.iconLock {
+  color: rgb(247, 158, 26);
+  width: 40px !important;
+  height: 40px !important;
+  margin-right: 20px
+}
+
+.alertLeft  {
+  display: flex;
+  flex-direction: row
+}
+
+.iconArrow {
+  color: rgb(31, 87, 241);
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.alertTitle {
+  color: rgb(247, 158, 26) !important;
+}

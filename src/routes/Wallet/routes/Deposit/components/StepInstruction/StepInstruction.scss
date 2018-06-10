@@ -1,0 +1,15 @@
+@import 'base';
+
+.container {
+  @extend .flex-column-center;
+  padding: 30px;
+}
+
+.root {
+  padding: 30px;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 600;
+}

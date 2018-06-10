@@ -1,0 +1,29 @@
+@import 'base';
+
+.container {
+  @extend .flex-column;
+  margin-top: 20px;
+  max-width: 1000px;
+  border-radius: 4px;
+  // min-width: 650px; 
+  overflow-x: auto !important
+}
+
+.root {
+  min-width: 650px !important
+}
+//tab
+
+.appBar {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.titleCell {
+  font-size: 15px;
+  font-weight: 600px;
+}
+
+.tableRow {
+  cursor: pointer
+}

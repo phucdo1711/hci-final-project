@@ -1,0 +1,71 @@
+@import 'base';
+
+.container {
+  @extend .flex-column-center;
+  padding: 10px 20px 10px 20px;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-grow: 1;
+  height: 100%;
+  width: 70%;
+  margin: .2rem;
+  @include mobile {
+    width: 90%;
+  }
+}
+
+.submit {
+  @extend .flex-column-center;
+  // width: 30%;
+  justify-content: flex-start;
+  min-width: 192px;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.options {
+  @extend .flex-row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  width: 80%;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+.remember {
+  @extend .flex-row;
+  flex-basis: 50%;
+  @include mobile {
+    display: none;
+  }
+}
+.recover {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: .8rem;
+  padding-top: 5px;
+  .hover {
+    text-decoration: underline;
+  }
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.loginButton {
+  color: white;
+  height: 38px !important;
+  width: 140px;
+  background-image: linear-gradient(284deg, #3369e7, #00aeff);
+  transition: box-shadow 200ms ease-in-out;
+  box-shadow: 0 10px 10px 0 rgba(62, 57, 107, 0.07) !important;
+  &:hover {
+    box-shadow: 0 10px 10px 0 rgba(62, 57, 107, 0.17),
+      0 2px 4px 0 rgba(62, 57, 107, 0.16) !important;
+  }
+  &:disabled {
+    color: rgba(255, 255, 255, 0.4)
+  }
+}

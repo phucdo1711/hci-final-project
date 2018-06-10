@@ -1,0 +1,25 @@
+@import 'base';
+.container {
+  @extend .flex-column-center;
+  padding-top: 4rem;
+}
+
+.section {
+  @extend .flex-column-center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.background {
+  width: 100%;
+}
+
+.hidenButton{
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  color: transparent;
+  width: 100px;
+  height: 100px;
+}

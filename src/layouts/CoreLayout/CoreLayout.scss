@@ -1,0 +1,15 @@
+@import 'base';
+
+.container {
+  // height: calc(100% - 500px);
+  margin-top: 50px;
+  /* momentum scrolling */
+  // overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.children {
+  // height: calc(100% - 48px);
+  // overflow-y: scroll;
+  background-color: $background;
+}

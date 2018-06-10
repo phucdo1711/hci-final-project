@@ -1,0 +1,45 @@
+@import 'base';
+
+.detailText {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    height: 30px
+  }
+
+.paperDetail {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.paperInputMoney {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;  
+    justify-content: space-between;  
+    align-items: center
+}
+
+.formControl{
+    width: 70%;
+}
+
+.input{
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    // &:after {
+    //     background-color: #FE6B8B !important
+    // }
+}
+
+.inputAdornment {
+    font-size: 25px !important
+}
+
+.rightTextExpand{
+    flex-basis: 50%;
+    flex-shrink: 0;
+}

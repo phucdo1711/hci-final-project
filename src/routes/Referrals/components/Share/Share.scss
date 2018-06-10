@@ -1,0 +1,47 @@
+@import 'base';
+
+.container {
+  @extend .flex-column-center;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center
+}
+
+.root {
+  padding: 10px 20px;
+}
+
+.sendMailBtn {
+  border: 1px solid rgba(66, 66, 66, 0.425) !important;
+}
+
+.fbBtn {
+  background-color: #4267b2 !important;
+  color: white !important;
+}
+
+.iconBtn {
+  margin-right: 5px;
+}
+
+.googleBtn {
+  background-color: rgb(220, 74, 56) !important;
+  color: white !important;
+}
+
+.input{
+  border: 1px solid rgba(156, 156, 156, 0.548) !important;
+  border-radius: 30px;
+  padding: 5px 20px !important;
+  width: 70%;
+}
+
+.btnGrid{
+  align-items: center;
+  text-align: center
+}

@@ -1,0 +1,87 @@
+@import 'base';
+
+.container {
+  @extend .flex-column-center;
+}
+
+.logo {
+  width: 100px;
+  object-fit: contain
+}
+
+.textDiv {
+ //margin-left: 20px;
+ //justify-content: center;
+ flex: 10;
+}
+
+.title{
+ font-weight: 600 !important;
+ color: rgba(0, 0, 0, 0.8) !important
+}
+
+.accountTitle {
+  font-weight: 600 !important;
+  color: rgba(0, 0, 0, 0.7) !important;
+  margin-right: 30px !important;
+}
+.subTitle{ 
+ color: rgba(0, 0, 0, 0.7) !important
+}
+
+.bankContainer {
+  display: flex;
+  flex-direction: row;
+  max-height: 100px;
+  align-items: center
+}
+.paper1{
+  padding: 20px;
+}
+
+.logoContainer{
+  flex: 2;
+  text-align: center
+}
+
+.accountBankDiv{
+  flex: 10;
+  flex-direction: row;
+  padding-top: 40px;
+  display: flex
+}
+
+.accountInput{
+  border: 1px solid rgba(156, 156, 156, 0.548) !important;
+  border-radius: 30px;
+  font-size: 20px !important;
+  font-weight: 550 !important;
+  padding: 10px 20px !important;
+ // box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);  
+  transition: all 300ms !important;
+  &:focus {
+    //box-shadow: 0 0 10px 0 rgba(56, 56, 56, 0.2);  
+    
+    border-color: #2790d6 !important;
+  }
+}
+
+.input{
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  &:after {
+      background-color: #2790d6!important
+  }
+}
+
+.formControl{
+  width: 50%;
+  min-width: 200px;
+}
+
+.paper2{
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}

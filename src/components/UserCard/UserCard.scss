@@ -1,0 +1,26 @@
+@import 'base';
+
+.container {
+  @extend .flex-row;
+}
+
+.avatar {
+  width: 42px !important;
+  height: 42px !important;
+}
+
+.headerName {
+  padding-left: 15px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+.mail {
+  color: rgb(136, 135, 135) !important;
+  font-weight: 500 !important;  
+}

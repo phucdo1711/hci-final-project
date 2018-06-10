@@ -1,0 +1,33 @@
+@import 'base';
+
+.root {
+  // margin-top: 30px;
+}
+
+.avatar {
+  width: 40px !important;
+  height: 40px !important;
+  margin-right: 20px;
+}
+
+.avatarContainer{
+  @extend .flex-row;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.textBold {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+.textEmail {
+  color: rgb(136, 135, 135) !important;
+  font-weight: 550 !important;  
+}
+.spacer{
+  flex: 1 1 100%;
+}
+.title{
+  flex: 0 0 auto;
+}

@@ -1,0 +1,9 @@
+@import 'base';
+
+.container {
+  @extend .flex-column;
+}
+
+.root {
+  max-width: 900px
+}

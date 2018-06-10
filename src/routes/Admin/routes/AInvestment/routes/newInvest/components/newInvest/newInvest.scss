@@ -1,0 +1,41 @@
+@import "base";
+
+.container {
+  @extend .flex-column;
+  padding-bottom: 20px;
+}
+.header {
+  padding: 8px 16px;
+}
+.body {
+  padding: 8px 16px;
+}
+.formControl {
+  margin: 8px !important;
+}
+.title {
+  margin: 16px 0 0 8px !important;
+}
+.colorCircle {
+  width: 12px;
+  height: 12px;
+  // padding: 5px;
+  cursor: pointer;
+  // color: white;
+  // margin-left: 8px;
+  // text-align: center;
+}
+.footer {
+  margin-top: 20px;
+  display: flex;
+
+}
+.submitButton {
+   background: linear-gradient(45deg, #1370DD, #30A5E7) !important;
+   color: white !important;
+   margin-right: 10px !important;
+   margin-left: 8px !important
+}
+// input {
+//   margin: 8px !important
+// }

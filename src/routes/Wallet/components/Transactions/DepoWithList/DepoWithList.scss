@@ -1,0 +1,14 @@
+@import 'base';
+
+.root {
+  overflow-x: auto;
+  max-width: 1200px;
+}
+
+.table {
+  min-width: 400px;
+}  
+
+.tableRow {
+  cursor: pointer;
+}

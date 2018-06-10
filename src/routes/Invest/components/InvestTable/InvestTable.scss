@@ -1,0 +1,17 @@
+@import 'base';
+
+.container {
+  overflow-x: auto !important
+  
+}
+.tableRow {
+  cursor: pointer
+}
+.titleCell {
+  // font-size: 15px;
+  // font-weight: 600px;
+}
+.root {
+  min-width: 650px !important;
+  max-width: 1000px;
+}

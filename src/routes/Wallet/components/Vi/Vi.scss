@@ -1,0 +1,59 @@
+@import 'base';
+
+.container {
+  @extend .flex-column;
+  
+}
+.card{
+  @extend .flex-column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #1370DD, #30A5E7) !important;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  box-shadow: 0 1px 18px rgba(0,0,0,0.25) !important;
+}
+
+
+.car2 {
+  @extend .flex-column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #6073ec, #9aa9ef) !important;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  box-shadow: 0 1px 18px rgba(0,0,0,0.25) !important;
+}
+
+.car3 {
+  @extend .flex-column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #f45a9e, #ee81ad) !important;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  box-shadow: 0 1px 18px rgba(0,0,0,0.25) !important;
+}
+
+.money {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 22px !important;
+  @include tablet {
+    font-size: 15px !important;
+  }
+
+}
+
+.button {
+  color: rgba(255, 255, 255, 0.9) !important;
+  // padding: 0 5px !important;
+  font-size: 11px !important;
+  min-width: 50px !important
+}

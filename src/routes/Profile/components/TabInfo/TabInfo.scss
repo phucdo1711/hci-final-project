@@ -1,0 +1,61 @@
+@import 'base';
+@import 'button';
+
+.container {
+ padding-top: 40px;
+}
+
+.avatar {
+  height: 150px !important;
+  width: 150px !important;
+  box-shadow: 0 1px 18px rgba(0, 0, 0, 0.329);
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  //justify-content: center;
+}
+
+.name {
+  margin-top: 20px !important;
+}
+
+.rightContainer {
+  padding-right: 60px !important;
+  @include tablet {
+    padding-left: 25px !important;
+  }
+  @include mobile {
+    padding-left: 25px !important;
+  }
+}
+
+.formControl{
+  margin-bottom: 20px !important;
+}
+
+.root {
+  padding: 20px 10px;
+}
+
+.editBtn{
+  font-size: 15px !important;
+  font-weight: bold !important
+}
+
+.editIcon{
+  margin-right: 5px;
+}
+
+.unverifiedBtn {
+  min-height: 20px !important;
+  min-width: 20px !important;
+  height: 20px  !important;
+  background: linear-gradient(45deg, rgb(238, 71, 59), rgb(231, 118, 103)) !important;
+    color: white !important;
+    line-height: 0 !important;
+    font-size: 11px !important;
+} 
+

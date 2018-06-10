@@ -1,0 +1,18 @@
+@import 'base';
+
+.container {
+  @extend .flex-column-center;
+}
+
+.root {
+  overflow-x: auto;
+  max-width: 1200px;
+}
+
+.table {
+  min-width: 400px;
+}
+
+.tableRow {
+  cursor: pointer;
+}

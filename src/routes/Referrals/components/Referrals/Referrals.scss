@@ -1,0 +1,20 @@
+@import 'base';
+
+.container {
+  @extend .flex-column;
+}
+
+.bodyContainer{
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+.appBar {
+  margin-top: 20px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.bodyContainer {
+  margin-top: 20px;
+}

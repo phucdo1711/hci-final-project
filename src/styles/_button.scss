@@ -1,0 +1,8 @@
+.primaryButton {
+    background: linear-gradient(45deg, #1370DD, #30A5E7) !important;
+    color: white !important;
+    &:disabled{
+        background: linear-gradient(45deg, rgba(19, 113, 221, 0.74), rgba(48, 164, 231, 0.692)) !important;
+        color: rgb(231, 231, 231) !important;
+    } 
+}

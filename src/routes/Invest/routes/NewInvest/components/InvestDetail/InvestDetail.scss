@@ -1,0 +1,26 @@
+@import 'base';
+@import 'button';
+
+.container {
+  max-width: 700px;
+    // /padding: 20px;
+   // min-width: 500px;
+}
+
+.heading {
+  flex-basis: 50%;
+  flex-shrink: 0;
+}
+
+.paper2 {
+  padding: 20px;
+  margin-top: 15px;
+}
+
+
+.btnDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 15px;
+}

@@ -1,0 +1,43 @@
+{
+  "projects": {
+    "master": "coinvnd",
+    "prod": "coinvnd",
+    "default": "coinvnd"
+  },
+  "ci": {
+    "createConfig": {
+      "master": {
+        "version": "${npm_package_version}",
+        "env": "development",
+        "firebase": {
+          "apiKey": "AIzaSyAi-NsCjeMjT1A50mPq_oqftswQb8HaPnA",
+          "authDomain": "coinvnd.firebaseapp.com",
+          "databaseURL": "https://coinvnd.firebaseio.com",
+          "projectId": "coinvnd",
+          "storageBucket": "coinvnd.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      },
+      "prod": {
+        "version": "${npm_package_version}",
+        "env": "production",
+        "firebase": {
+          "apiKey": "AIzaSyAi-NsCjeMjT1A50mPq_oqftswQb8HaPnA",
+          "authDomain": "coinvnd.firebaseapp.com",
+          "databaseURL": "https://coinvnd.firebaseio.com",
+          "projectId": "coinvnd",
+          "storageBucket": "coinvnd.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      }
+    }
+  }
+}
